@@ -1,119 +1,110 @@
-Да, конечно. Давай словами, максимально понятно, по шагам — как если бы ты объяснял это другу или потенциальному инвестору.
+## **Architecture of Meaning-Centered AI (SENSMAP)**
+
+### **Main Idea**
+
+Traditional AI (e.g., GPT, Siri, search engines) generates responses as a chain of tokens — essentially, it only “remembers” a linear sequence of text or events.
+**SENSMAP** offers a fundamentally different approach:
+
+* The brain (and AI) **does not store “text memory”**, but instead moves through a field of meanings.
+* Any query is a route through a semantic space (a graph of meanings), not just a sequence of letters or words.
+* The goal is to teach the machine to find meanings like a human: through transitions, associations, logical and contextual connections.
 
 ---
 
-## **Архитектура Meaning-Centered AI (SENSMAP)**
+### **1. Semantic Field / Meaning Graph**
 
-### **Главная идея**
-
-Обычный ИИ (например, GPT, Siri, поисковики) строит ответы как цепочку токенов — по сути, помнит только "линейку" текста или событий.
-**SENSMAP** предлагает принципиально другой подход:
-
-* Мозг (и ИИ) **не хранит "текстовую память"**, а перемещается по полю смыслов.
-* Любой запрос — это маршрут через смысловое пространство (граф смыслов), а не просто последовательность букв/слов.
-* Цель — научить машину находить смыслы так, как это делает человек: через переходы, ассоциации, логические и контекстные связи.
+* Imagine that all meanings an AI can perceive are **nodes** in a large graph.
+* Nodes can be of different levels: words, concepts, situations, logical operations.
+* There are **edges** between nodes: “part of”, “result of”, “analogous to”, etc.
+* **Example**:
+  “Two times two” → (multiplication operation) → “four”.
 
 ---
 
-### **1. Смысловое поле / граф смыслов**
+### **2. Semantic Routing / Navigating Meanings**
 
-* Представим, что все смыслы, которые может воспринять ИИ, — это **узлы** (nodes) в большом графе.
-* Узлы могут быть разного уровня: слова, понятия, ситуации, логические операции.
-* Между узлами — **связи** (edges): "это часть того", "это следствие того", "это аналог того" и т.п.
-* **Пример**:
-  "Дважды два" → (операция умножения) → "четыре".
+* When a user enters a query, the system doesn’t just look for similar text, it **builds a route**:
 
----
-
-### **2. Semantic Routing / Навигация по смыслу**
-
-* Когда пользователь вводит запрос, система не просто ищет похожий текст, а **строит маршрут**:
-
-  * Где я сейчас (стартовый смысл)?
-  * Куда мне надо попасть (желаемый смысл)?
-  * Через какие шаги можно пройти, чтобы объяснить/достичь результата?
-* Каждый переход объясним: можно показать, почему был выбран именно такой шаг.
+  * Where am I now (starting meaning)?
+  * Where do I need to go (desired meaning)?
+  * What steps can I take to explain or reach the result?
+* Every step is explainable: you can show why that particular step was chosen.
 
 ---
 
 ### **3. Embeddings & NLP**
 
-* Для понимания, что находится "рядом" в смысловом поле, используем **эмбеддинги** — векторные представления смыслов, которые вычисляет современный ИИ.
-* Вместо простого "поиска по совпадению" — ищем смысловую близость.
+* To understand what is “nearby” in semantic space, we use **embeddings** — vector representations of meanings computed by modern AI.
+* Instead of simple “text matching,” the system searches for semantic proximity.
 
 ---
 
-### **4. Механика работы**
+### **4. How It Works**
 
-1. **Ввод**: Пользователь пишет запрос ("Как вычислить дважды два?").
-2. **Преобразование**: Система строит embedding запроса, ищет в графе ближайшие смысловые узлы.
-3. **Маршрутизация**: Находит оптимальный маршрут от исходного смысла к целевому — например, через операции "умножение", "арифметика", "ответ".
-4. **Объяснение**: Система возвращает не просто результат, а **путь**, по которому она шла (например,
-   "Запрос 'дважды два' → найдено 'умножение' → вычислено '4'").
-5. **Вывод**: Ответ и подробное объяснение.
-
----
-
-### **5. В чём смысловая революция?**
-
-* Такой ИИ может:
-
-  * Не просто выдавать ответы, а **объяснять логику поиска**.
-  * Показывать **альтернативные маршруты** (разные смыслы — разные "пути").
-  * В перспективе: учиться от людей, строить новые смысловые связи, "запоминать" не линейно, а как опыт перемещения по смысловому пространству.
+1. **Input**: The user submits a query (“How to calculate two times two?”).
+2. **Transformation**: The system builds an embedding of the query, searches the graph for the closest semantic nodes.
+3. **Routing**: It finds the optimal route from the starting meaning to the target — for example, through “multiplication”, “arithmetic”, “answer”.
+4. **Explanation**: The system returns not just a result, but the **path** it took (e.g.,
+   “Query ‘two times two’ → found ‘multiplication’ → computed ‘4’”).
+5. **Output**: The answer plus a detailed explanation.
 
 ---
 
-### **6. Пример применения**
+### **5. What’s the Semantic Revolution?**
 
-* Вопрос: "Как работает электричество?"
-* Система ищет "электричество" → "физика" → "движение электронов" → "ток" → "источник энергии" и так далее.
-* Ты видишь весь смысловой маршрут и можешь на любом этапе задать уточнение или свернуть на другой смысловой "путь".
+* Such AI can:
+
+  * Not just give answers, but **explain the logic of its search**.
+  * Show **alternative routes** (different meanings — different “paths”).
+  * In the future: learn from people, build new semantic connections, and “remember” not linearly but as experience navigating the semantic space.
 
 ---
 
-## **Компоненты архитектуры**
+### **6. Example Use Case**
 
-1. **Граф смыслов** (semantic graph):
+* Question: “How does electricity work?”
+* The system looks up “electricity” → “physics” → “electron movement” → “current” → “energy source”, and so on.
+* You see the entire semantic route and can, at any point, clarify or switch to a different semantic “path”.
 
-   * Может храниться в памяти, в JSON, или в графовой базе данных (например, Neo4j).
+---
+
+## **Architecture Components**
+
+1. **Semantic Graph**:
+
+   * Can be stored in memory, in JSON, or in a graph database (e.g., Neo4j).
 2. **Semantic Router**:
 
-   * Алгоритм поиска маршрута по графу (например, BFS/DFS/алгоритм Дейкстры — но не по расстоянию, а по "близости смыслов").
+   * An algorithm for finding routes through the graph (e.g., BFS/DFS/Dijkstra’s algorithm — but by “semantic proximity,” not distance).
 3. **Embedding Engine**:
 
-   * Блок для вычисления векторных представлений слов/фраз (через HuggingFace, OpenAI, др.).
+   * Module for computing vector representations of words/phrases (using HuggingFace, OpenAI, etc.).
 4. **API / Backend**:
 
-   * FastAPI сервер, который принимает запросы, строит маршруты, возвращает результат.
-5. **(По желанию) Frontend**:
+   * FastAPI server that accepts queries, builds routes, returns results.
+5. **(Optional) Frontend**:
 
-   * Простой веб-интерфейс для визуализации маршрутов.
-
----
-
-## **В перспективе:**
-
-* Каждый ответ — это не просто результат, а **"карта маршрута"** по смысловому пространству.
-* Можно внедрять новые смыслы, учить систему (или давать пользователю вносить связи).
-* Можно делать мета-анализ: какие маршруты чаще используются, где "провалы" в смысловой карте.
+   * Simple web interface for visualizing routes.
 
 ---
 
-## **В чём отличие от классических ИИ/LLM?**
+## **Looking Forward:**
 
-* **Не линейная память, а смысловая навигация**.
-* **Прозрачность логики** — видны все шаги.
-* **Гибкость** — можно адаптировать маршрут под пользователя.
-
----
-
-## **Итого, в двух словах:**
-
-**SENSMAP** — это искусственный интеллект, который "думает маршрутами смысла", а не просто запоминает тексты.
-Он строит и объясняет смысловые переходы между понятиями, а не просто угадывает ответы.
+* Every answer is not just a result, but a **“route map”** through the semantic space.
+* You can introduce new meanings, teach the system (or let users add connections).
+* You can perform meta-analysis: which routes are most used, where the “gaps” in the semantic map are.
 
 ---
 
-Если нужно упростить ещё или добавить конкретику по каждому компоненту — скажи!
-Или, если хочешь, покажу схему в виде блока или простую визуализацию.
+## **How is it Different from Classic AI/LLMs?**
+
+* **Not linear memory, but semantic navigation.**
+* **Transparent logic** — all steps are visible.
+* **Flexibility** — the route can be adapted to the user.
+
+---
+
+## **In a Nutshell:**
+
+**SENSMAP** is artificial intelligence that “thinks in routes of meaning” instead of just memorizing texts.
+It builds and explains semantic transitions between concepts, not just guessing answers.
